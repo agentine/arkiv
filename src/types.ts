@@ -54,14 +54,6 @@ export interface ProgressData {
   };
 }
 
-export interface GlobOptions {
-  cwd?: string;
-  dot?: boolean;
-  ignore?: string | string[];
-  pattern?: string;
-  nomount?: boolean;
-  expand?: boolean;
-}
 
 export interface ArchiveEntry {
   name: string;

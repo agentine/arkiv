@@ -4,7 +4,8 @@ export { ZipArchiveEntry, ZipArchiveOutputStream } from './zip.js';
 export type { ZipEntryOptions, ZipOutputStreamOptions } from './zip.js';
 export { TarArchiveEntry, TarArchiveOutputStream } from './tar.js';
 export type { TarEntryOptions, TarOutputStreamOptions } from './tar.js';
-export { GlobWalker } from './glob.js';
+export { globWalk, globToRegex } from './glob.js';
+export type { GlobOptions, GlobMatch } from './glob.js';
 export type {
   ArchiveFormat,
   ArchiveOptions,
@@ -13,7 +14,6 @@ export type {
   EntryData,
   EntryStats,
   ProgressData,
-  GlobOptions,
   ArchiveEntry,
   FormatModule,
 } from './types.js';

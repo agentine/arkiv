@@ -7,7 +7,7 @@ import arkiv, {
   ZipArchiveOutputStream,
   TarArchiveEntry,
   TarArchiveOutputStream,
-  GlobWalker,
+  globWalk,
 } from '../src/index.js';
 
 describe('scaffold', () => {
@@ -50,7 +50,7 @@ describe('scaffold', () => {
     expect(TarArchiveOutputStream).toBeDefined();
   });
 
-  it('exports GlobWalker', () => {
-    expect(GlobWalker).toBeDefined();
+  it('exports globWalk function', () => {
+    expect(typeof globWalk).toBe('function');
   });
 });
