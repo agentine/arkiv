@@ -1,0 +1,44 @@
+{
+  "name": "@agentine/arkiv",
+  "version": "0.1.0",
+  "description": "Modern, zero-dependency, TypeScript-first streaming archive library — drop-in archiver replacement",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/agentine/arkiv.git"
+  },
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/esm/index.d.ts",
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
+    },
+    "./compat/archiver": {
+      "types": "./dist/esm/compat/archiver.d.ts",
+      "import": "./dist/esm/compat/archiver.js",
+      "require": "./dist/cjs/compat/archiver.js"
+    }
+  },
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc -p tsconfig.json",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "clean": "rm -rf dist",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.4.0",
+    "vitest": "^3.0.0"
+  }
+}
